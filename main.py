@@ -147,10 +147,10 @@ def analyze_uploaded_file(uploaded_file):
         st.error(f"❌ Error processing file: {e}")
 
 # App UI
-st.set_page_config(page_title="💰 Finance Tracker", layout="centered")
-st.title("💰 Personal Finance Tracker")
+st.set_page_config(page_title="📈Trend Analysis & Finance Tracker", layout="centered")
+st.title("Trend Analysis & Finance Tracker")
 
-menu = st.sidebar.radio("Navigation", ["Add Transaction", "View Summary", "Upload CSV"])
+menu = st.sidebar.radio("Navigation", ["Add Transaction", "View Summary", "Trend Analysis"])
 
 if menu == "Add Transaction":
     st.header("➕ Add Transaction")
@@ -182,8 +182,8 @@ elif menu == "View Summary":
         with col3:
             st.download_button("Download PDF", get_pdf_download(data), file_name="finance_data.pdf", mime="application/pdf")
 
-elif menu == "Upload CSV":
-    st.header("📂 Upload CSV File")
+elif menu == "Trend Analysis":
+    st.header("📂 Trend Analysis")
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file:
         analyze_uploaded_file(uploaded_file)
@@ -192,7 +192,7 @@ elif menu == "Upload CSV":
 st.markdown("""
 ---
 <p style='text-align: center;'>
-    Made with ❤️ by <b>Dev Ice</b> &nbsp;|&nbsp;
+    Made with ❤️ by <b>Im_Dev</b> &nbsp;|&nbsp;
     <a href="https://github.com/Dev-comett" target="_blank">🐱 GitHub</a> &nbsp;|&nbsp;
     <a href="https://www.linkedin.com/in/dev-ice/" target="_blank">💼 LinkedIn</a>
 </p>
