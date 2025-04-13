@@ -184,7 +184,7 @@ elif menu == "View Summary":
 
 elif menu == "Trend Analysis":
     st.header("📂 Trend Analysis")
-    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+    uploaded_file = st.file_uploader("Choose a CSV or Excel file", type=["csv", "xlsx"])
     if uploaded_file:
         analyze_uploaded_file(uploaded_file)
 
